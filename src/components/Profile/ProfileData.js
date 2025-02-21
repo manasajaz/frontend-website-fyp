@@ -17,10 +17,10 @@ const ProfileData = () => {
       try {
         const endpoint =
           activeTab === "doctors"
-            ? "http://localhost:4600/api/auth/doctor"
-            : "http://localhost:4600/api/auth/patient";
+            ? "https://fypbackend-production-2048.up.railway.app/api/auth/doctor"
+            : "https://fypbackend-production-2048.up.railway.app/api/auth/patient";
         const response = await axios.get(endpoint);
-        console.log("API Response:", response.data); 
+        console.log("API Response:", response.data);
         setData(response.data);
       } catch (error) {
         console.error(`Error fetching ${activeTab}:`, error);
@@ -43,7 +43,7 @@ const ProfileData = () => {
     }
 
     try {
-      await axios.delete("http://localhost:4600/api/auth/delete", {
+      await axios.delete("https://fypbackend-production-2048.up.railway.app/api/auth/delete", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -64,18 +64,16 @@ const ProfileData = () => {
         <h2 className="text-2xl font-bold text-white mb-8">Profile</h2>
         <ul className="space-y-6">
           <li
-            className={`flex items-center gap-4 p-3 rounded-lg cursor-pointer hover:bg-gray-700 transition ${
-              activeTab === "doctors" ? "bg-gray-700" : ""
-            }`}
+            className={`flex items-center gap-4 p-3 rounded-lg cursor-pointer hover:bg-gray-700 transition ${activeTab === "doctors" ? "bg-gray-700" : ""
+              }`}
             onClick={() => setActiveTab("doctors")}
           >
             <FaUserMd className="text-xl" />
             <span className="text-lg">Doctors</span>
           </li>
           <li
-            className={`flex items-center gap-4 p-3 rounded-lg cursor-pointer hover:bg-gray-700 transition ${
-              activeTab === "patients" ? "bg-gray-700" : ""
-            }`}
+            className={`flex items-center gap-4 p-3 rounded-lg cursor-pointer hover:bg-gray-700 transition ${activeTab === "patients" ? "bg-gray-700" : ""
+              }`}
             onClick={() => setActiveTab("patients")}
           >
             <FaUser className="text-xl" />

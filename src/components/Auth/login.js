@@ -36,7 +36,7 @@ const Login = ({ history }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:4600/api/auth/login', formData)
+      const response = await axios.post('https://fypbackend-production-2048.up.railway.app/api/auth/login', formData)
       localStorage.setItem("token", response.data.token);
       navigate("/")
 
@@ -58,12 +58,12 @@ const Login = ({ history }) => {
 
   return (
 
-    <div className='grid grid-cols-10 gap-5 p-5 bg-red-50 min-h-screen'>
-      <div className='col-span-4 row-span-6 '>
+    <div className='grid grid-cols-10 gap-5 lg:p-5 p-2 bg-red-50 min-h-screen'>
+      <div className='lg:col-span-4 col-span-12 row-span-6 '>
         <img className='w-full object-cover object-left hover:object-center transition-all duration-500 h-full w-full' src={loginImg}></img>
       </div>
-      <div className=' content-around col-span-6 row-span-6 bg-white p-5 rounded- shadow min-h-screen'>
-        <h2 className='flex justify-start text-4xl mb-8 pb-4'>Sign In</h2>
+      <div className=' content-around lg:col-span-6 col-span-12 row-span-6 bg-white lg:p-5 p-2 rounded- shadow min-h-screen'>
+        <h2 className='flex justify-start lg:text-[40px] text-[25px] lg:mb-8 mb-4 lg:pb-4 pb-2'>Sign In</h2>
         <form onSubmit={handlelogin} className='space-y-4'>
           <div>
             <label className='block text-sm font-medium text-gray-700'>Email</label>

@@ -62,7 +62,7 @@ const Register = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:4600/api/auth/register",
+        "https://fypbackend-production-2048.up.railway.app/api/auth/register",
         formDataToSubmit,
         {
           headers: {
@@ -85,15 +85,15 @@ const Register = () => {
   };
 
   return (
-    <div className="grid grid-cols-10 gap-4 p-5 bg-indigo-50 min-h-screen">
+    <div className="grid grid-cols-10 gap-4 md:p-5 p-2 bg-indigo-50 min-h-screen">
       {/* Left-side image */}
-      <div className="col-span-4">
+      <div className="md:col-span-4 col-span-12">
         <img className="w-full object-cover h-full" src={loginImg} alt="Register" />
       </div>
 
       {/* Right-side form */}
-      <div className="col-span-6 bg-white p-5 rounded shadow flex flex-col justify-start">
-        <h2 className="text-4xl mb-8 mt-12 font-semibold">Create an Account</h2>
+      <div className="md:col-span-6 col-span-12 bg-white p-2 rounded shadow flex flex-col justify-start">
+        <h2 className="lg:text-[40px] text-[25px] lg:mb-8 mb-4 lg:mt-12 mt-6 font-semibold">Create an Account</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium">Name</label>

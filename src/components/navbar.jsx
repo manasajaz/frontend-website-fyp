@@ -71,7 +71,7 @@ function Navbar() {
         <div className="logo-area">
           <div className="auto-container">
             <div className="row">
-              <div className="col-lg-3 col-md-3 col-sm-6 col-7 mx-md-auto mx-sm-auto mx-auto pl-0">
+              <div className="col-lg-3 col-md-3 col-sm-6 col-7  mx-auto">
                 <div className="logo">
                   <a href="index.html">
                     <img
@@ -107,7 +107,7 @@ function Navbar() {
           </div>
         </div>
 
-        <div className="sticky-menu">
+        <div className="sticky-menu lg:block hidden">
           <div className="mainmenu-area">
             <div className="auto-container">
               <div className="row">
