@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import loginImg from "../../assets/AuthImages/blog.jpg";
+// import loginImg from "../../assets/AuthImages/blog.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import axios from "axios";
@@ -88,7 +88,7 @@ const Register = () => {
     <div className="grid grid-cols-10 gap-4 md:p-5 p-2 bg-indigo-50 min-h-screen">
       {/* Left-side image */}
       <div className="md:col-span-4 col-span-12">
-        <img className="w-full object-cover h-full" src={loginImg} alt="Register" />
+        <img className="w-full object-cover h-full" src="https://new.nmicr.ru/wp-content/uploads/2022/09/nacionalnyj-kancer-registr.jpg" alt="Register" />
       </div>
 
       {/* Right-side form */}
