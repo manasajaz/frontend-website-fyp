@@ -38,7 +38,7 @@ const Login = ({ history }) => {
     try {
       const response = await axios.post('https://fypbackend-production-2048.up.railway.app/api/auth/login', formData)
       localStorage.setItem("token", response.data.token);
-      navigate("/")
+      navigate("https://rococo-strudel-a6614e.netlify.app/")
 
     } catch (error) {
       if (error.response.status === 400 && error.response.data.error === 'Invalid credentials') {
