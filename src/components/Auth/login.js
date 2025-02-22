@@ -9,7 +9,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import Register from './register'
 
 //import Assets
-import loginImg from "../../assets/AuthImages/blog.jpg";
+// import loginImg from "../../assets/AuthImages/blog.jpg";
 
 
 const Login = ({ history }) => {
@@ -60,7 +60,7 @@ const Login = ({ history }) => {
 
     <div className='grid grid-cols-10 gap-5 lg:p-5 p-2 bg-red-50 min-h-screen'>
       <div className='lg:col-span-4 col-span-12 row-span-6 '>
-        <img className='w-full object-cover object-left hover:object-center transition-all duration-500 h-full w-full' src={loginImg}></img>
+        <img className='w-full object-cover object-left hover:object-center transition-all duration-500 h-full w-full' src="https://steelcase-res.cloudinary.com/image/upload/c_fill,dpr_auto,q_70,h_435,w_774/v1553697745/www.steelcase.com/2019/03/27/19-0117979.gif"></img>
       </div>
       <div className=' content-around lg:col-span-6 col-span-12 row-span-6 bg-white lg:p-5 p-2 rounded- shadow min-h-screen'>
         <h2 className='flex justify-start lg:text-[40px] text-[25px] lg:mb-8 mb-4 lg:pb-4 pb-2'>Sign In</h2>
